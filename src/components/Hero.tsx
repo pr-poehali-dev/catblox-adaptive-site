@@ -1,4 +1,14 @@
 const Hero = () => {
+  const handlePlayNow = () => {
+    console.log("Play Now clicked");
+    alert("Welcome to CatBlox! 🎮 Choose a game below!");
+  };
+
+  const handleCreateGame = () => {
+    console.log("Create Game clicked");
+    alert("Game Creator opening soon! 🎨 Stay tuned!");
+  };
+
   return (
     <section className="bg-gradient-to-b from-blue-400 to-blue-600 text-white py-16 px-4">
       <div className="max-w-4xl mx-auto text-center">
@@ -18,10 +28,16 @@ const Hero = () => {
         </div>
 
         <div className="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
-          <button className="hero-button w-full md:w-auto px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold text-xl rounded-lg shadow-xl transform hover:scale-105 transition-all duration-200">
+          <button
+            onClick={handlePlayNow}
+            className="hero-button w-full md:w-auto px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold text-xl rounded-lg shadow-xl transform hover:scale-105 transition-all duration-200"
+          >
             🎮 Play Now!
           </button>
-          <button className="hero-button w-full md:w-auto px-8 py-4 bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-bold text-xl rounded-lg shadow-xl transform hover:scale-105 transition-all duration-200">
+          <button
+            onClick={handleCreateGame}
+            className="hero-button w-full md:w-auto px-8 py-4 bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-bold text-xl rounded-lg shadow-xl transform hover:scale-105 transition-all duration-200"
+          >
             🎨 Create Game
           </button>
         </div>
